@@ -20,7 +20,7 @@ class Program
 
     static void a_MultipleOfFiveReached(object sender, MultipleOfFiveEventArgs e)
     {
-        Console.WriteLine("Multiple of five reached: ", e.Total);
+        Console.WriteLine("Multiple of five reached: {0}", e.Total);
     }
 }
 

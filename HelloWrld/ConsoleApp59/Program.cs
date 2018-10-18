@@ -1,9 +1,8 @@
-﻿//다이렉트 호출 스크립트 입니다.
- 
+﻿
 using System;
  
-namespace Akadia.NoDelegate
-{
+namespace Akadia.Delegate
+{   
     public class MyClass
     {
         public void Process()
@@ -15,10 +14,12 @@ namespace Akadia.NoDelegate
 
     public class Test
     {
+        public delegate void Action();
         static void Main(string[] args)
         {
-            MyClass myClass = new MyClass();
-            myClass.Process();
+            MyClass mc = new MyClass();            
+            Action action = mc.Process;
+            action();
         }
     }
 }

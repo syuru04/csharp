@@ -15,7 +15,9 @@ namespace Akadia.SimpleDelegate
         public delegate void LogHandler(string message);
         public void Process(LogHandler logHandler)
         {
-            (채워 주세요...)
+                logHandler.Invoke("Process() begin");
+                logHandler.Invoke("Process() end");
+            
         }
     }
 
@@ -52,8 +54,8 @@ namespace Akadia.SimpleDelegate
 
             MyClass myClass = new MyClass();
 
-            MyClass.LogHandler myLogger = (채워 주세요 );
-            (채워 주세요  )
+            MyClass.LogHandler myLogger = fl.Logger;
+            myClass.Process(myLogger);
             fl.Close();
         }
     }
